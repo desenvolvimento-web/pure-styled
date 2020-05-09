@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure Styled</title>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react-is@16.13.1/umd/react-is.development.js"></script>
+    <script src="https://unpkg.com/styled-components@5.1.0/dist/styled-components.js"></script>
+  </head>
+  <body>
+    <div id="stage"></div>
+    <script>
+      const e = React.createElement;
+
+      const Button = styled.button({
+        backgroundColor: "red",
+        color: "green",
+        borderColor: "blue",
+      });
+
+      const App = e("div", {}, [e(Button, {}, "Click me")]);
+
+      ReactDOM.render(App, document.querySelector("#stage"));
+    </script>
+  </body>
+</html>
